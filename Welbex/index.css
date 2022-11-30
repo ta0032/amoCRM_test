@@ -17,7 +17,7 @@ li {
 }
 
 html {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 @media (max-width: 568px) {
@@ -38,7 +38,6 @@ body {
   body {
     padding: 0px;
     min-width: 320px;
-    overflow: hidden;
   }
 }
 
@@ -166,6 +165,8 @@ body {
 
 @media (max-width: 568px) {
   .header-top {
+    width: 100%;
+    position: fixed;
     background-color: #0e1014;
   }
 }
@@ -181,7 +182,6 @@ body {
     min-height: 55px;
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
     list-style-type: none;
     justify-content: space-between;
     align-items: center;
@@ -190,7 +190,7 @@ body {
 
 @media (max-width: 568px) {
   .m-li-text {
-    width: 49px;
+    width: max-content;
     height: 15px;
     font-family: "Inter";
     font-style: normal;
@@ -304,6 +304,7 @@ body {
 @media (max-width: 568px) {
   .center {
     margin: 0px;
+    margin-top: 55px;
     padding: 40px 15px 0;
     width: auto;
     background-position: 258px 162px;
